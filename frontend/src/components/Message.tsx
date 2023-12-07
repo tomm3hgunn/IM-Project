@@ -20,9 +20,9 @@ const Message: React.FC = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             getMyMessages();
-        }, 5000); 
+        }, 5000);
 
-        return () => clearInterval(intervalId); 
+        return () => clearInterval(intervalId);
     }, []);
     const sendMessage = async () => {
         const token = localStorage.getItem('token');
@@ -32,7 +32,7 @@ const Message: React.FC = () => {
         }
 
         try {
-            const response = await fetch('http://https://im-backend-6uzp.onrender.com/message', {
+            const response = await fetch('http://im-backend-6uzp.onrender.com/message', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -43,8 +43,8 @@ const Message: React.FC = () => {
 
             if (response.ok) {
                 console.log('Message sent successfully');
-                setMessage(''); 
-                getMessages(receiver); 
+                setMessage('');
+                getMessages(receiver);
             } else {
                 console.error('Failed to send message');
             }
@@ -61,7 +61,7 @@ const Message: React.FC = () => {
         }
 
         try {
-            const response = await fetch(`http://https://im-backend-6uzp.onrender.com/messages/${receiverUsername}`, {
+            const response = await fetch(`http://im-backend-6uzp.onrender.com/messages/${receiverUsername}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -86,7 +86,7 @@ const Message: React.FC = () => {
         }
 
         try {
-            const response = await fetch(`http://https://im-backend-6uzp.onrender.com/my_messages`, {
+            const response = await fetch(`http://im-backend-6uzp.onrender.com/my_messages`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`

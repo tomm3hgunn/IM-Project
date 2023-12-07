@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom';
 const Register: React.FC = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const handleRegister = async () => {
         try {
-            const response = await axios.post('http://https://im-backend-6uzp.onrender.com/register', { username, password });
+            const response = await axios.post('http://im-backend-6uzp.onrender.com/register', { username, password });
             if (response.status === 201) {
                 navigate('/login');
             }

@@ -6,15 +6,15 @@ import { useNavigate } from 'react-router-dom';
 const Login: React.FC = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://https://im-backend-6uzp.onrender.com/login', { username, password });
+            const response = await axios.post('http://im-backend-6uzp.onrender.com/login', { username, password });
             if (response.data.access_token) {
                 localStorage.setItem('token', response.data.access_token);
                 localStorage.setItem('username', username);
-                navigate('/message'); 
+                navigate('/message');
             }
         } catch (error) {
             console.error('Login failed:', error);

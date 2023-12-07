@@ -2,10 +2,10 @@ import React from 'react';
 
 const Logout: React.FC = () => {
     const handleLogout = async () => {
-        const token = localStorage.getItem('token'); 
+        const token = localStorage.getItem('token');
         if (token) {
             try {
-                const response = await fetch('http://https://im-backend-6uzp.onrender.com/logout', {
+                const response = await fetch('http://im-backend-6uzp.onrender.com/logout', {
                     method: 'POST',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -15,7 +15,7 @@ const Logout: React.FC = () => {
                 if (response.ok) {
                     console.log('Logged out successfully');
                     localStorage.removeItem('token');
-                    window.location.reload(); 
+                    window.location.reload();
                 } else {
                     console.error('Failed to log out');
                 }
