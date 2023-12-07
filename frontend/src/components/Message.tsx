@@ -1,5 +1,5 @@
 
-// src/components/Message.tsx
+
 import React, { useState, useEffect } from 'react';
 
 interface IMessage {
@@ -11,7 +11,7 @@ interface IMessage {
 const Message: React.FC = () => {
     const [message, setMessage] = useState('');
     const [receiver, setReceiver] = useState('');
-    const [messages, setMessages] = useState<IMessage[]>([]); // Use the IMessage interface
+    const [messages, setMessages] = useState<IMessage[]>([]);
     const loggedInUsername = localStorage.getItem('username');
 
     useEffect(() => {
@@ -20,9 +20,9 @@ const Message: React.FC = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             getMyMessages();
-        }, 5000); // Fetch messages every 5 seconds
+        }, 5000); 
 
-        return () => clearInterval(intervalId); // Clear interval on component unmount
+        return () => clearInterval(intervalId); 
     }, []);
     const sendMessage = async () => {
         const token = localStorage.getItem('token');
@@ -43,8 +43,8 @@ const Message: React.FC = () => {
 
             if (response.ok) {
                 console.log('Message sent successfully');
-                setMessage(''); // Clear the message input
-                getMessages(receiver); // Retrieve messages again to update the list
+                setMessage(''); 
+                getMessages(receiver); 
             } else {
                 console.error('Failed to send message');
             }

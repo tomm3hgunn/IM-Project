@@ -2,7 +2,7 @@ import React from 'react';
 
 const Logout: React.FC = () => {
     const handleLogout = async () => {
-        const token = localStorage.getItem('token'); // Assuming you store the JWT token in localStorage
+        const token = localStorage.getItem('token'); 
         if (token) {
             try {
                 const response = await fetch('http://localhost:5000/logout', {
@@ -14,8 +14,8 @@ const Logout: React.FC = () => {
 
                 if (response.ok) {
                     console.log('Logged out successfully');
-                    localStorage.removeItem('token'); // Clear the token from localStorage
-                    window.location.reload(); // Refresh the page
+                    localStorage.removeItem('token');
+                    window.location.reload(); 
                 } else {
                     console.error('Failed to log out');
                 }

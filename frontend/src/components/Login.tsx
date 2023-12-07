@@ -1,4 +1,4 @@
-// src/components/Login.tsx
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -6,15 +6,15 @@ import { useNavigate } from 'react-router-dom';
 const Login: React.FC = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); // Create a navigate instance
+    const navigate = useNavigate(); 
 
     const handleLogin = async () => {
         try {
             const response = await axios.post('http://localhost:5000/login', { username, password });
             if (response.data.access_token) {
-                localStorage.setItem('token', response.data.access_token); // Store the token
-                localStorage.setItem('username', username); // Store the username
-                navigate('/message'); // Navigate to messages page
+                localStorage.setItem('token', response.data.access_token);
+                localStorage.setItem('username', username);
+                navigate('/message'); 
             }
         } catch (error) {
             console.error('Login failed:', error);

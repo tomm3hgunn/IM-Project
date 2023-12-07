@@ -2,7 +2,7 @@ import React from 'react';
 import Login from '../components/Login';
 import Register from '../components/Register';
 import UsersOnline from '../components/UsersOnline';
-import Logout from '../components/Logout'; // Import Logout component
+import Logout from '../components/Logout'; 
 
 const LandingPage: React.FC = () => {
     return (
@@ -15,11 +15,11 @@ const LandingPage: React.FC = () => {
                     <Register />
                 </div>
                 <div className="mb-6">
-                    <Logout /> {/* Add Logout button */}
+                    <Logout /> 
                 </div>
             </div>
             <div className="max-w-md mx-auto mt-6">
-                <UsersOnline /> {/* UsersOnline component */}
+                <UsersOnline /> 
             </div>
         </div>
     );

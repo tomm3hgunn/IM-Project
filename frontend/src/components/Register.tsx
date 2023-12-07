@@ -6,13 +6,13 @@ import { useNavigate } from 'react-router-dom';
 const Register: React.FC = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); // Create a navigate instance
+    const navigate = useNavigate(); 
 
     const handleRegister = async () => {
         try {
             const response = await axios.post('http://localhost:5000/register', { username, password });
             if (response.status === 201) {
-                navigate('/login'); // Navigate to login page after successful registration
+                navigate('/login');
             }
         } catch (error) {
             console.error('Registration failed:', error);
