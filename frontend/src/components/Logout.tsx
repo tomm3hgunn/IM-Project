@@ -5,7 +5,7 @@ const Logout: React.FC = () => {
         const token = localStorage.getItem('token'); // Assuming you store the JWT token in localStorage
         if (token) {
             try {
-                const response = await fetch('http://localhost:5000/logout', {
+                const response = await fetch('http://https://im-backend-6uzp.onrender.com/logout', {
                     method: 'POST',
                     headers: {
                         'Authorization': `Bearer ${token}`

@@ -32,7 +32,7 @@ const Message: React.FC = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/message', {
+            const response = await fetch('http://https://im-backend-6uzp.onrender.com/message', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const Message: React.FC = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/messages/${receiverUsername}`, {
+            const response = await fetch(`http://https://im-backend-6uzp.onrender.com/messages/${receiverUsername}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -86,7 +86,7 @@ const Message: React.FC = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/my_messages`, {
+            const response = await fetch(`http://https://im-backend-6uzp.onrender.com/my_messages`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -114,9 +114,9 @@ const Message: React.FC = () => {
             <h2>
                 logged in as: {loggedInUsername}
             </h2>
-            
+
             <button onClick={() => window.location.href = '/'}>Back</button>
-           
+
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"

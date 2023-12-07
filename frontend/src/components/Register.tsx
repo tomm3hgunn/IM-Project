@@ -10,7 +10,7 @@ const Register: React.FC = () => {
 
     const handleRegister = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/register', { username, password });
+            const response = await axios.post('http://https://im-backend-6uzp.onrender.com/register', { username, password });
             if (response.status === 201) {
                 navigate('/login'); // Navigate to login page after successful registration
             }
