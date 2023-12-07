@@ -32,7 +32,7 @@ const Message: React.FC = () => {
         }
 
         try {
-            const response = await fetch('http://im-backend-6uzp.onrender.com/message', {
+            const response = await fetch('https://im-backend-6uzp.onrender.com/message', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const Message: React.FC = () => {
         }
 
         try {
-            const response = await fetch(`http://im-backend-6uzp.onrender.com/messages/${receiverUsername}`, {
+            const response = await fetch(`https://im-backend-6uzp.onrender.com/messages/${receiverUsername}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -86,7 +86,7 @@ const Message: React.FC = () => {
         }
 
         try {
-            const response = await fetch(`http://im-backend-6uzp.onrender.com/my_messages`, {
+            const response = await fetch(`https://im-backend-6uzp.onrender.com/my_messages`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`

@@ -10,7 +10,7 @@ const UsersOnline: React.FC = () => {
 
     useEffect(() => {
         const fetchUsers = async () => {
-            const response = await fetch('http://im-backend-6uzp.onrender.com/users');
+            const response = await fetch('https://im-backend-6uzp.onrender.com/users');
             if (response.ok) {
                 const data = await response.json() as User[];
                 setUsers(data);

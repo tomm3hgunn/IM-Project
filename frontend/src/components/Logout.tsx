@@ -5,7 +5,7 @@ const Logout: React.FC = () => {
         const token = localStorage.getItem('token');
         if (token) {
             try {
-                const response = await fetch('http://im-backend-6uzp.onrender.com/logout', {
+                const response = await fetch('https://im-backend-6uzp.onrender.com/logout', {
                     method: 'POST',
                     headers: {
                         'Authorization': `Bearer ${token}`
