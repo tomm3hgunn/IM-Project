@@ -25,6 +25,8 @@ Develop an Instant Messaging (IM) Platform showcasing networking concepts and re
 -   **Password Encryption**: Implemented using Flask-Bcrypt.
 -   **JWT Tokens**: Used for secure session management.
 
+![GitHub Image](/images/User_table.png)
+
 ### 3. Real-Time Messaging
 
 -   **Sending/Receiving Messages**: Users can send messages to others, which update in real-time.
@@ -33,10 +35,18 @@ Develop an Instant Messaging (IM) Platform showcasing networking concepts and re
 
 ![GitHub Image](/images/Conversation.png)
 
+![GitHub Image](/images/Conversation_table.png)
+
 ### 4. Online User Status
 
 -   **Online Presence**: Show online/offline status of users.
 -   **Database Tracking**: Online status tracked and updated in the Supabase database.
+
+![GitHub Image](/images/UI.png)
+
+![GitHub Image](/images/Login.png)
+
+![GitHub Image](/images/Logged_in.png)
 
 ## Challenges & Solutions
 
